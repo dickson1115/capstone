@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="./resize_drag.css" type="text/css" />
+<link rel="stylesheet" href="./builderPage.css" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script src="./resize_drag.js"></script>
+<script src="./builderPage.js"></script>
+<section class="components_section">
+
+</section>
+<div class="top_background"> </div>
+<div class="top_bar">
+    <img class="name_icon" src="./img/name3.png" />
+    <div class="navigation_bar">
+        <a class="button" href="#">Home</a>
+        <a class="button" href="#">Tutorial</a>
+        <a id="builder" class="button" href="./builderPage.html">Builder</a>
+        <a id="explore" class="button" href="./explorePage.html">Explore</a>
+        <a class="button" href="#">About</a>
+        <a class="button" href="./loginPage2.html">Login</a>
+
+    </div>
+</div>
+
+<div class="view_explore_window">
+    <div class="project_container">
+        <div class="project_canvas">
+            <img src="img/front.png" style="display: flex;">
+            <img src="img/side.png" style="display: none;">
+            <img src="img/top.png" style="display: none;">
+        </div>
+        <div class="view_controller">
+            <div class="show_view_selected" onclick="show_view(this,0)">Front</div>
+            <div class="show_view_element" onclick="show_view(this,1)">Side</div>
+            <div class="show_view_element" onclick="show_view(this,2)">Top</div>
+        </div>
+    </div>
+    <script>
+        var element = document.querySelector(".project_container");
+        console.log(element);
+        var container = document.querySelector(".view_explore_window");
+        console.log(container);
+        for (var i = 0; i < 11; i++) {
+            container.appendChild(element.cloneNode(true));
+        }
+    </script>
+</div>
+
+</html>
+<script>
+    function show_view(element, num) {
+        var related_element = element.parentNode.parentNode.children[0];
+        var children_list = related_element.children;
+        var view_controller_children_list = element.parentNode.children;
+        console.log(children_list);
+        for (var i = 0; i < children_list.length; i++) {
+            var child = children_list[i];
+            if (i == num) {
+                children_list[i].style.display = "flex";
+                view_controller_children_list[i].className = "show_view_selected";
+            }
+            else {
+                children_list[i].style.display = "none";
+                view_controller_children_list[i].className = "show_view_element";
+            }
+        }
+    }
+</script>
+
+<style>
+    #explore {
+        background-color: rgba(129, 129, 129, 0.3);
+        border-radius: 10px;
+        /* outline: 5px solid rgba(110, 110, 110, 0.851); */
+    }
+
+    .view_explore_window {
+        position: relative;
+        top: 50px;
+        display: flex;
+  flex-direction: row;
+  align-items: stretch;
+        flex-flow: row wrap;
+        gap: 10px;
+        width: 85%;
+        margin: auto;
+    }
+
+    .project_container {
+        position: relative;
+        width: 300px;
+        height: 330px;
+        border: 10px solid rgba(129, 129, 129, 0.3);
+        background-color: beige;
+        border-radius: 10px;
+    }
+
+    .project_canvas {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        border-radius: 10px;
+    }
+
+    .project_canvas img {
+        width: 100%;
+    }
+
+    .view_controller {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .view_controller div {
+        text-align: center;
+        width: 30%;
+        padding: 6px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .view_controller show_view_element:hover {
+        background-color: rgba(129, 129, 129, 0.3);
+        border-radius: 5px;
+    }
+
+    .show_view_selected {
+        background-color: rgba(129, 129, 129, 0.3);
+    }
+
+
+</style>
