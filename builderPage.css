@@ -161,7 +161,6 @@ input:focus {
 
 .canvas {
   height: 100%;
-  touch-action: none;
 }
 
 .viewing_angle {
