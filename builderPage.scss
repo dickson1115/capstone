@@ -15,7 +15,6 @@ html {
     height: 50px;
     align-items: center;
     background-color: rgba(170, 167, 167, 0.492);
-    /* border-radius: 10px; */
     margin-bottom: 5px;
 }
 
@@ -92,7 +91,6 @@ html {
 
 
 .view_container .demo {
-    /* height:400px; */
     width: 100%;
 
 }
@@ -157,15 +155,6 @@ input:focus {
 .resize_drag {
     position: absolute;
     height: 120px;
-    /* min-height: 6.5em; */
-    /* margin: 1rem 0 0 1rem; */
-    /* background-color: #29e;
-  color: white; */
-    /* border-radius: 0.75em;
-        touch-action: none;
-        user-select: none;
-        transform: translate(0px, 0px); */
-    /* border: 1px solid #29e; */
 }
 
 .resize_drag:focus {
@@ -186,18 +175,9 @@ input:focus {
 }
 
 .canvas {
-    /* border: 6px solid black; */
-
     height: 100%;
 }
-
-// .view_container:has( #top_view_container){
-//     height: 1000px;
-//     /* border: 5px solid pink; */
-// }
-// $main_width: 1728;
 .canvas img {
-    // max-width: calc($main_width * 85%) + "px";
 }
 
 .viewing_angle {
@@ -234,8 +214,6 @@ select {
 
     display: block;
     width: 15%;
-    /* border-left: 5px solid #fa807250; */
-
     border-left: 5px solid #4169e140;
 }
 
@@ -267,7 +245,6 @@ select {
     background-color: rgba(129, 129, 129, 0.3);
     border-radius: 10px;
     outline: 5px solid rgba(129, 129, 129, 0.7);
-    /* outline: 5px solid rgba(110, 110, 110, 0.851); */
 }
 
 .button {

@@ -1,23 +1,16 @@
-// target elements with the "draggable" class
 interact('.resize_drag')
   .draggable({
-    // enable inertial throwing
     inertia: true,
-    // keep the element within the area of it's parent
     modifiers: [
       interact.modifiers.restrictRect({
         restriction: 'parent',
         endOnly: true
       })
     ],
-    // enable autoScroll
     autoScroll: true,
 
     listeners: {
-      // call this function on every dragmove event
       move: dragMoveListener,
-
-      // call this function on every dragend event
       end(event) {
         var textEl = event.target.querySelector('p')
 
@@ -30,7 +23,6 @@ interact('.resize_drag')
     }
   })
   interact('.resize_drag').resizable({
-    // resize from all edges and corners
     edges: { left: true, right: true, bottom: true, top: true },
 
     listeners: {
@@ -38,12 +30,8 @@ interact('.resize_drag')
         var target = event.target
         var x = (parseFloat(target.getAttribute('data-x')) || 0)
         var y = (parseFloat(target.getAttribute('data-y')) || 0)
-
-        // update the element's style
         target.style.width = event.rect.width + 'px'
         target.style.height = event.rect.height + 'px'
-
-        // translate when resizing from top or left edges
         x += event.deltaRect.left
         y += event.deltaRect.top
 
@@ -51,21 +39,11 @@ interact('.resize_drag')
 
         target.setAttribute('data-x', x)
         target.setAttribute('data-y', y)
-        // target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height)
       }
     },
     modifiers: [
-      // keep the edges inside the parent
       interact.modifiers.restrictEdges({
         outer: 'parent'
-        // inner: {
-        //   left: 100,  // the left edge must be <= 100
-        //   right: 200  // the right edge must be >= 200
-        // },
-        // outer: {
-        //   left: 0,    // the left edge must be >= 0
-        //   right: 300  // the right edge must be <= 300
-        // }
       }),
 
       // minimum size

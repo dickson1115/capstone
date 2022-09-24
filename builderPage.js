@@ -1,21 +1,5 @@
 
-
-// // Select the target node.
-// var target = document.querySelector('view_container_manu')
-
-// // Create an observer instance.
-// var observer = new MutationObserver(function(mutations) {
-//     console.log(target.innerText+123);   
-// });
-
-// // Pass in the target node, as well as the observer options.
-// observer.observe(target, {
-//     attributes:    true,
-//     childList:     true,
-//     characterData: true
-// });
-
- function dropDownFunction(element) {
+function dropDownFunction(element) {
   var string = element.value;
   console.log(string);
   console.log(1);
@@ -26,22 +10,23 @@
   document.getElementById("front_big_view_container").style.display = "none";
   document.getElementById("side_big_view_container").style.display = "none";
   document.getElementById("top_big_view_container").style.display = "none";
-  document.getElementById(string +"_big_view_container").style.display = "flex";
+  document.getElementById(string + "_big_view_container").style.display = "flex";
 }
-function test(element) {
-  // not gonna work
-  element.removeClass("run-animation").addClass("run-animation");
-};
 
+function button_onclick(element) {
+  element.style.backgroundColor = "rgba(250, 128, 114, 0.442)";
+}
 function clicked_component(element) {
-  test(element.children[0]);
-  // element.children[0].classList.removeClass("jello-horizontal");
-  // element.children[0].classList.addClass("jello-horizontal");
+  console.log(element.children[0].classList);
+  element.children[0].classList.remove("jello-horizontal");
+  void element.offsetWidth; // trigger reflow
+  console.log(element.children[0].classList);
+  element.children[0].classList.add("jello-horizontal");
   var name = element.children[1].innerText;
   var layer = document.createElement('div');
   layer.className = 'layer';
   layer.innerText = name;
-  
+
   console.log(element.parentElement.getAttribute('id'));
   var string = element.parentElement.getAttribute('id');
   console.log(element.children[0].getAttribute('src'));
@@ -63,15 +48,11 @@ function clicked_component(element) {
   console.log(view.children.length);
   new_img.tabIndex = view.children.length;
   new_img.style.zIndex = view.children.length;
-  console.log( new_img.style.zIndex);
-  // new_img.style.maxWidth = max_width;
+  console.log(new_img.style.zIndex);
   new_img.style.maxWidth = max_width + "px";
   document.getElementById(string + "_canvas").insertBefore(new_img, document.getElementById(string + "_canvas").children[1]);
 }
 
-function deleted_component(element) {
-
-}
 var copiedElement;
 var copiedElement_width;
 var copiedElement_height;

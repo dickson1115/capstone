@@ -13,13 +13,12 @@
 <div class="top_bar">
     <img class="name_icon" src="./img/name3.png" />
     <div class="navigation_bar">
-        <a class="button" href="#">Home</a>
-        <a class="button" href="#">Tutorial</a>
-        <a id="builder" class="button" href="./builderPage.html">Builder</a>
-        <a id="explore" class="button" href="./explorePage.html">Explore</a>
-        <a class="button" href="#">About</a>
-        <a class="button" href="./loginPage2.html">Login</a>
-
+        <a class="button" href="#" >Home</a>
+        <a class="button" href="#" >Tutorial</a>
+        <a id="builder" class="button" href="./builderPage.html" onclick="button_onclick(this)">Builder</a>
+        <a id="explore" class="button" href="./explorePage.html" onclick="button_onclick(this)">Explore</a>
+        <a class="button" href="#" >About</a>
+        <a class="button" href="./loginPage2.html" onclick="button_onclick(this)">Login</a>
     </div>
 </div>
 <div class="big_main_container">
@@ -34,7 +33,7 @@
 
             <div id="front" class="viewing_angle">
                 <div tabindex="0" class="component_container" onclick=clicked_component(this)>
-                    <img class="jello-horizontal" src="./img/components/fuselage_front.png">
+                    <img src="./img/components/fuselage_front.png">
                     <div>Fuselage</div>
                 </div>
                 <div tabindex="1" class="component_container" onclick=clicked_component(this)>
@@ -204,19 +203,7 @@
                     <label>Trust:</label>
                     <input name="submitted-name" autocomplete="name">
                 </div>
-
-
-                <!-- <button>Save</button> -->
                 </form>
-
-
-                <!-- Form with fieldset, legend, and label -->
-                <!-- <form method="post">
-            <fieldset>
-                <legend>Title</legend>
-                <label><input type="radio" name="radio"> Select me</label>
-            </fieldset>
-        </form> -->
             </div>
 
 
@@ -352,7 +339,6 @@
     #builder {
         background-color: rgba(129, 129, 129, 0.3);
         border-radius: 10px;
-        /* outline: 5px solid rgba(110, 110, 110, 0.851); */
     }
 
     .big_main_container {}
@@ -375,6 +361,4 @@
         text-align: left;
         padding: 8px;
     }
-
-    tr:nth-child(even) {}
 </style>

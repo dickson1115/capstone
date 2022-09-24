@@ -12,13 +12,12 @@
 <div class="top_bar">
     <img class="name_icon" src="./img/name3.png" />
     <div class="navigation_bar">
-        <a class="button" href="#">Home</a>
-        <a class="button" href="#">Tutorial</a>
-        <a id="builder" class="button" href="./builderPage.html">Builder</a>
-        <a id="explore" class="button" href="./explorePage.html">Explore</a>
-        <a class="button" href="#">About</a>
-        <a class="button" href="./loginPage2.html">Login</a>
-
+        <a class="button" href="#" >Home</a>
+        <a class="button" href="#" >Tutorial</a>
+        <a id="builder" class="button" href="./builderPage.html" onclick="button_onclick(this)">Builder</a>
+        <a id="explore" class="button" href="./explorePage.html" onclick="button_onclick(this)">Explore</a>
+        <a class="button" href="#" >About</a>
+        <a class="button" href="./loginPage2.html" onclick="button_onclick(this)">Login</a>
     </div>
 </div>
 
@@ -65,21 +64,23 @@
             }
         }
     }
+    function button_onclick(element) {
+        element.style.backgroundColor = "rgba(250, 128, 114, 0.442)";
+    }
 </script>
 
 <style>
     #explore {
         background-color: rgba(129, 129, 129, 0.3);
         border-radius: 10px;
-        /* outline: 5px solid rgba(110, 110, 110, 0.851); */
     }
 
     .view_explore_window {
         position: relative;
         top: 50px;
         display: flex;
-  flex-direction: row;
-  align-items: stretch;
+        flex-direction: row;
+        align-items: stretch;
         flex-flow: row wrap;
         gap: 10px;
         width: 85%;
@@ -130,6 +131,4 @@
     .show_view_selected {
         background-color: rgba(129, 129, 129, 0.3);
     }
-
-
 </style>
