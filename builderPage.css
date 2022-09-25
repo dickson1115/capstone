@@ -4,6 +4,22 @@ html {
   font-weight: bold;
 }
 
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: beige;
+  border-radius: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  background-color: rgb(135, 135, 135);
+}
+
 .top_bar,
 .top_background {
   position: absolute;
@@ -68,6 +84,11 @@ html {
 .components_outter_container > div > * {
   display: block;
   margin-bottom: 5px;
+  box-shadow: 1px 1px 2px rgb(129, 129, 129);
+}
+
+.components_outter_container > div > div {
+  box-shadow: none;
 }
 
 .components_outter_container > div:last-child {
@@ -86,6 +107,7 @@ html {
   text-align: center;
   border-radius: 10px;
   padding: 5px;
+  box-shadow: 1px 1px 2px rgb(129, 129, 129);
 }
 
 .component_container:focus {
@@ -148,10 +170,12 @@ input {
   font-family: "Reem Kufi Ink", serif;
   font-weight: bold;
   width: 100%;
+  box-shadow: 1px 1px 2px rgb(129, 129, 129);
 }
 
 input:focus {
   background-color: beige;
+  outline: 5px solid rgba(65, 105, 225, 0.5);
 }
 
 .view_container_title {
@@ -164,7 +188,7 @@ input:focus {
 }
 
 .resize_drag:focus {
-  outline: 5px solid royalblue;
+  outline: 5px solid rgba(65, 105, 225, 0.5);
   background-color: rgba(65, 105, 225, 0.1254901961);
   border-radius: 5px;
 }
@@ -241,7 +265,7 @@ select {
 .button:hover {
   background-color: rgba(129, 129, 129, 0.3);
   border-radius: 10px;
-  outline: 5px solid rgba(129, 129, 129, 0.7);
+  box-shadow: 1px 1px 2px rgb(129, 129, 129);
 }
 
 .button {
@@ -252,4 +276,8 @@ select {
 
 .button:visited {
   color: black;
+}
+
+.button:active {
+  outline: 5px solid rgba(65, 105, 225, 0.5);
 }/*# sourceMappingURL=builderPage.css.map */

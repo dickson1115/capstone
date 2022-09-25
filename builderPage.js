@@ -13,9 +13,6 @@ function dropDownFunction(element) {
   document.getElementById(string + "_big_view_container").style.display = "flex";
 }
 
-function button_onclick(element) {
-  element.style.backgroundColor = "rgba(250, 128, 114, 0.442)";
-}
 function clicked_component(element) {
   console.log(element.children[0].classList);
   element.children[0].classList.remove("jello-horizontal");
