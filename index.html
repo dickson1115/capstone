@@ -67,6 +67,7 @@
     border: 1px solid beige;
     box-shadow: 10px 5px gainsboro;
     border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(129 129 129);
   }
 
   .title {
@@ -114,6 +115,7 @@
     border-radius: 25px;
     font-family: 'Reem Kufi Ink', serif;
     font-weight: bold;
+    box-shadow: 1px 1px 2px rgb(129 129 129);
 
   }
 
@@ -131,19 +133,20 @@
   .forgot_password,
   .guest_login {
     position: relative;
-    width: 40%;
+    width: 45%;
     display: block;
+
   }
 
   .forgot_password>a,
   .guest_login>a {
     display: block;
-    font-size: x-small;
+    font-size: small;
     color: red;
     text-decoration: none;
     background-color: rgba(255, 0, 0, 0.084);
-    padding: 5px;
     border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(129 129 129);
   }
 
   .guest_login>a {
@@ -159,6 +162,9 @@
     background-color: lightgreen;
   }
 
+  .guest_login>a:active, .forgot_password>a:active, .login:active{
+    outline: 5px solid rgba(65, 105, 225, 0.50);;
+  }
   .login_Icon {
     position: absolute;
     left: calc(50% - 50px);
@@ -179,13 +185,12 @@
     height: 40px;
     width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 
   }
 input{
-  border: 1px solid beige;
-  box-shadow: 1px 1px 10px  beige;
+  box-shadow: 1px 1px 2px rgb(129 129 129);
 }
   input.required:invalid{
     border: 1px solid red;
