@@ -13,22 +13,28 @@
 <div class="top_bar">
     <img class="name_icon" src="./img/name3.png" />
     <div class="navigation_bar">
-        <a class="button" href="#" >Home</a>
-        <a class="button" href="#" >Tutorial</a>
+        <a class="button" href="#">Home</a>
+        <a class="button" href="#">Tutorial</a>
         <a id="builder" class="button" href="./builderPage.html" onclick="button_onclick(this)">Builder</a>
         <a id="explore" class="button" href="./explorePage.html" onclick="button_onclick(this)">Explore</a>
-        <a class="button" href="#" >About</a>
+        <a class="button" href="#">About</a>
         <a class="button" href="./index.html" onclick="button_onclick(this)">Login</a>
     </div>
 </div>
 <div class="big_main_container">
     <div class="components_outter_container">
-        <div class="container_title"> Components </div>
-        <select name="view" onchange="dropDownFunction(this)">
-            <option id="dropdown_view_Front" value="front">Front</option>
-            <option id="dropdown_view_Side" value="side">Side</option>
-            <option id="dropdown_view_Top" value="top">Top</option>
-        </select>
+        <div>
+            <div class="container_title"> Components </div>
+            <select name="view" onchange="dropDownFunction(this)">
+                <option id="dropdown_view_Front" value="front">Front</option>
+                <option id="dropdown_view_Side" value="side">Side</option>
+                <option id="dropdown_view_Top" value="top">Top</option>
+            </select>
+            <select name="model" onchange="dropDownFunction(this)">
+                <option >Boeing 787</option>
+            </select>
+        </div>
+
         <div class="components_container">
 
             <div id="front" class="viewing_angle">
@@ -239,7 +245,6 @@
                     <div class="view_container_title">Layer</div>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -249,7 +254,9 @@
 
 
         <table>
-            <caption><h3>DC-8 Jet's Geometric Data</h3></caption>
+            <caption>
+                <h3>DC-8 Jet's Geometric Data</h3>
+            </caption>
             <tr>
                 <th>Condition</th>
                 <th>1</th>
@@ -348,6 +355,7 @@
         top: 5px;
         background-color: beige;
         border-radius: 10px;
+        box-shadow: 1px 1px 5px  rgba(129, 129, 129, 50);
     }
 
     table {
