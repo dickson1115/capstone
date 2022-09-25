@@ -146,7 +146,7 @@ html::-webkit-scrollbar-thumb {
 .user_form {
   background-color: beige;
   /* min-width: 80px; */
-  width: 180px;
+  width: 130px;
   border-radius: 10px;
   padding: 10px;
   margin-right: 5px;
@@ -154,22 +154,20 @@ html::-webkit-scrollbar-thumb {
   box-shadow: 1px 1px 5px rgb(129, 129, 129);
 }
 
-.user_form label {
-  width: 100%;
-}
-
 .form_input {
   width: 90%;
+  margin-top: 2px;
 }
 
 input {
   background-color: rgba(220, 220, 220, 0.8);
-  border: 1px solid black;
-  margin: 2px;
+  border: 1px solid rgb(129, 129, 129);
+  margin-top: 2px;
   border-radius: 5px;
   font-family: "Reem Kufi Ink", serif;
   font-weight: bold;
   width: 100%;
+  outline: none;
   box-shadow: 1px 1px 2px rgb(129, 129, 129);
 }
 
@@ -233,7 +231,7 @@ select {
 
 .view_container_manu {
   display: block;
-  width: 80px;
+  width: 130px;
   text-align: center;
   box-shadow: 1px 1px 5px rgb(129, 129, 129);
   border-radius: 10px;
@@ -242,12 +240,13 @@ select {
 
 .layer {
   text-align: center;
-  width: 100%;
+  width: 90%;
   margin: auto;
   margin-top: 10px;
   padding: 1px;
   background-color: gainsboro;
   border-radius: 5px;
+  box-shadow: 1px 1px 5px rgb(129, 129, 129);
 }
 
 #front_big_view_container {
